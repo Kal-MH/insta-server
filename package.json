@@ -9,7 +9,7 @@
     "migrate": "npx prisma migrate dev",
     "studio": "npx prisma studio",
     "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "start": "cross-env NODE_OPTIONS=–max-old-space-size=420 && npm run compile && node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
