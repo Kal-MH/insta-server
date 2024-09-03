@@ -8,8 +8,8 @@
     "dev": "tsx watch src/index.ts --delay 2s",
     "migrate": "npx prisma migrate dev",
     "studio": "npx prisma studio",
-    "compile": "tsc",
-    "start": "cross-env NODE_OPTIONS=–max-old-space-size=2048 && npm run compile && node ./dist/index.js"
+    "compile": "tsc -p .",
+    "start": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
