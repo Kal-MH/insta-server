@@ -5,12 +5,12 @@ import url, { fileURLToPath } from "url";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-const loadedTypes = await loadFiles(`${__dirname}/**/*.typeDefs.ts`, {
+const loadedTypes = await loadFiles(`${__dirname}/**/*.typeDefs.{ts,js}`, {
   requireMethod: async (path: string) => {
     return await import(url.pathToFileURL(path).toString());
   },
 });
-const loadedResolvers = await loadFiles(`${__dirname}/**/*.resolvers.ts`, {
+const loadedResolvers = await loadFiles(`${__dirname}/**/*.resolvers.{ts,js}`, {
   requireMethod: async (path: string) => {
     return await import(url.pathToFileURL(path).toString());
   },
