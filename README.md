@@ -11,8 +11,8 @@
 
 ### Deploy
 
-- heroku
-- github actions
+- render.com
+- github actions(prisma migrate)
 
 ## 설치 및 사용 방법
 
